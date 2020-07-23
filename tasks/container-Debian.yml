@@ -11,7 +11,7 @@
     group: "{{ operator_group }}"
     mode: 0750
   become: true
-  with_items:
+  loop:
     - "{{ openstackclient_configuration_directory }}"
     - "{{ openstackclient_data_directory }}"
     - "{{ openstackclient_docker_compose_directory }}"
@@ -55,7 +55,7 @@
     owner: "{{ operator_user }}"
     group: "{{ operator_group }}"
   become: true
-  with_items:
+  loop:
     - openstack
     - ospurge
 
