@@ -1,3 +1,0 @@
----
-- name: Include tasks
-  include: "{{ openstackclient_install_type }}-{{ ansible_os_family }}.yml"
